@@ -1,0 +1,7 @@
+const fs = require("fs")
+const path = require('path')
+// const buffer = fs.readFileSync("C:/working/ROOT.war")
+// const viewPath = path.join(__dirname, '../../views')
+// console.log('search---------', viewPath)
+// const modulesFiles = require.context(viewPath, true, /\.md$/)
+// console.log('search---------', modulesFiles)
