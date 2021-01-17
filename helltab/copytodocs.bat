@@ -1,0 +1,1 @@
+xcopy "%~dp0public"  "%~dp0\..\docs" /s /e /k  /i /y
