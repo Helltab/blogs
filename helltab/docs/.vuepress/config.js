@@ -2,7 +2,7 @@ const themeConfig = require('./config/theme/')
 const h_search = require('./search/')
 
 module.exports = {
-    base: '/',
+    base: '/blogs/',
     title: "Helltab",
     description: '表独立兮山之上, 云容容兮而在下',
     dest: 'public',
