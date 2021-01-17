@@ -1,6 +1,6 @@
 const themeConfig = require('./config/theme/')
 const h_search = require('./search/')
-
+const path = require('path')
 module.exports = {
     base: '/blogs/',
     title: "Helltab",
@@ -10,11 +10,20 @@ module.exports = {
         ['link', {rel: 'icon', href: '/favicon.ico'}],
         ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no'}]
     ],
-
+    configWebpack: {
+        resolve: {
+            alias: {
+                // '@theme': path.resolve(__dirname, "vuepress-theme-reco")
+            }
+        }
+    },
     theme: 'reco',
     themeConfig,
     markdown: {
-        lineNumbers: true
+        lineNumbers: true,
+        extendMarkdown: md => {
+            md.use(require("markdown-it-disable-url-encode"));
+        }
     },
     plugins: ['@vuepress/medium-zoom', 'flowchart', 'cursor-effects',
         ["@vuepress-reco/vuepress-plugin-kan-ban-niang",

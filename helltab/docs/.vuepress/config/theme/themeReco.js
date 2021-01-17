@@ -9,6 +9,18 @@ module.exports = {
         tag: {
             location: 3, // 在导航栏菜单中所占的位置，默认3
             text: '标签' // 默认 “标签”
+        },
+        other: {
+            location: 4, // 在导航栏菜单中所占的位置，默认3
+            text: 'Linux' // 默认 “标签”
+        },
+        algorithm: {
+            location: 5, // 在导航栏菜单中所占的位置，默认3
+            text: '算法' // 默认 “标签”
+        },
+        database: {
+            location: 6, // 在导航栏菜单中所占的位置，默认3
+            text: '数据库' // 默认 “标签”
         }
     },
     // 最后更新时间
@@ -18,5 +30,5 @@ module.exports = {
     // 备案号
     record: '-------',
     // 项目开始时间
-    startYear: '2020'
+    startYear: '2020',
 }

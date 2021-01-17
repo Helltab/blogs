@@ -3,4 +3,7 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_10" project-jdk-name="15" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="WebPackConfiguration">
+    <option name="path" value="$PROJECT_DIR$/docs/.vuepress/theme/alias_idea_config.js" />
+  </component>
 </project>
