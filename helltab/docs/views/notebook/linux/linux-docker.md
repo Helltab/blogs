@@ -65,6 +65,7 @@ docker exec -it [id] /bin/bash
 docker update --restart=always [id] 
 # 查看日志 t: 时间戳 f: 实时更新
 docker logs -tf [id]
+# docker logs -f -t --since="2018-02-08" --tail=100 CONTAINER_ID
 ```
 
 ## 镜像备份还原
@@ -405,5 +406,21 @@ DOCKER_STORAGE_OPTIONS="-s overlay"
 <=
 systemctl daemon-reload
 systemctl restart docker
+```
+
+>  WARNING: IPv4 forwarding is disabled. Networking will not work.
+
+```sh
+vim /etc/sysctl.conf
+=>
+#配置转发
+net.ipv4.ip_forward=1
+<=
+#重启服务，让配置生效
+systemctl restart network
+
+#查看是否成功,如果返回为“net.ipv4.ip_forward = 1”则表示成功
+sysctl net.ipv4.ip_forward
+
 ```
 
